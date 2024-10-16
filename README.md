@@ -829,7 +829,7 @@ const Cocktail = () => {
             })}
           </p>
           <p>
-            <span className='drink-data'>instructons :</span> {instructions}
+            <span className='drink-data'>instructions :</span> {instructions}
           </p>
         </div>
       </div>

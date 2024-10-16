@@ -16,15 +16,17 @@ const CocktailList = ({ drinks }) => {
     // Map through the drinks array and format the drink data
     const formattedDrinks = drinks.map((item) => {
         // Destructure relevant properties from each drink object
-        const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strCategory, strGlass } = item;
+        const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strCategory, strGlass, strInstruction } = item;
 
         // Return a new object with the properties we need for each drink
         return {
             id: idDrink, // ID of the drink
             name: strDrink, // Name of the drink
             image: strDrinkThumb, // Image of the drink
+            category:strCategory,
             info: strAlcoholic, // Alcoholic or non-alcoholic information
             glass: strGlass, // Type of glass used for the drink
+            instructions: strInstruction,
         }
     });
 
