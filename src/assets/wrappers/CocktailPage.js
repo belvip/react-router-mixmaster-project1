@@ -42,7 +42,7 @@ const Wrapper = styled.div`
         .drink-info {
         padding-top: 0;
         }
-    }
+    } 
 `;
 
 export default Wrapper;
