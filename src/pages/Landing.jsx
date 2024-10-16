@@ -5,6 +5,7 @@ import CocktailList from '../components/CocktailList';
 import SearchForm from '../components/SearchForm';
 
 const cocktailSearchUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=';
+import { useQuery } from '@tanstack/react-query';
 
 
 export const loader = async () => {
