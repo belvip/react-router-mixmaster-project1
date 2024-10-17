@@ -19,8 +19,9 @@ const singleCocktailQuery = (id) => {
 export const loader = (queryClient) => async ({params}) => {
 {/* console.log(data); */}
 const { id } = params;
+  await queryClient.ensureQueryData(singleCocktailQuery(id)) // To cache the single cocktail
 
-  return { id, data };
+  return { id };
   
 }
 
@@ -47,7 +48,6 @@ const validIngredients = Object.keys(singleDrink).filter((key) =>
   key.startsWith('strIngredient') && singleDrink[key] !== null).map((key) => singleDrink[key]);
 
 {/* console.log(validIngredients); */}
-
 
 const {
     strDrink:name, 
