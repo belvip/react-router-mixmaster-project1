@@ -19,7 +19,9 @@ import { action as newsletterAction} from './pages/Newsletter';
 
 const queryClient = new QueryClient({
   defaultOptions: {
-    staleTime: 1000 * 60 * 5,
+    queries:{
+      staleTime: 1000 * 60 * 5,
+    }
   }
 })
 const router = createBrowserRouter([
@@ -72,7 +74,7 @@ const App = () => {
       <RouterProvider router={router} />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  );
+  ); 
   
 }
 
