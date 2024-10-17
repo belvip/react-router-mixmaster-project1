@@ -18,21 +18,22 @@ const searchCocktailsQuery = (searchTerm) => {
 }
 
 // Loader function to fetch drinks based on the search term
-export const loader = async ({ request }) => {
+export const loader = (queryClient) => async ({ request }) => {
     const url = new URL(request.url);
-    const searchTerm = url.searchParams.get('search') || 'p'; 
-    
+    const searchTerm = url.searchParams.get('search') || 'a'; 
+    await queryClient.ensureQueryData(searchCocktailsQuery(searchTerm))
     return { searchTerm };
 };
 
 // Landing page component
 const Landing = () => {
     const { searchTerm } = useLoaderData(); // Get data from loader
-    const { data:drinks, isLoading} = useQuery(
+    console.log(searchTerm);
+    
+    const { data:drinks} = useQuery(
         searchCocktailsQuery(searchTerm)
     );
 
-    if(isLoading) return <h4>Loading...</h4>
 
     return (
         
