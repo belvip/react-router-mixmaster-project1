@@ -10,7 +10,7 @@ const Navbar = () => {
 
             <div className="nav-center">
                 
-                <span className="logo">MixMaster</span>
+                <span className="logo">The Cocktail Hub</span>
 
                 <div className="nav-links">
 

@@ -48,3 +48,5 @@ const Landing = () => {
 };
 
 export default Landing;
+
+// https://chatgpt.com/c/670f8c63-ad40-8012-b0b7-ae571d01d113
